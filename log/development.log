@@ -182,3 +182,58 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 35ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 4152)
 
 
+Started GET "/" for ::1 at 2021-11-10 13:51:54 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.7ms | Allocations: 315)
+Completed 200 OK in 19ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 2453)
+
+
+Started GET "/rails/info/routes" for ::1 at 2021-11-10 13:54:52 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (Duration: 6.3ms | Allocations: 2996)
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 3.1ms | Allocations: 1181)
+  Rendered /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 15.2ms | Allocations: 6968)
+  Rendered layout /Users/lesliegonzalez/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/layouts/application.html.erb (Duration: 15.8ms | Allocations: 7213)
+Completed 200 OK in 24ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 9750)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-10 13:55:33 -0500
+Processing by Api::V1::VocabularyWordsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1566)
+
+
+  
+NameError (uninitialized constant Api::V1::VocabularyWordsController::VocabularyWords):
+  
+app/controllers/api/v1/vocabulary_words_controller.rb:4:in `index'
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-10 13:59:19 -0500
+Processing by Api::V1::VocabularyWordsController#index as HTML
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms | Allocations: 1516)
+
+
+  
+NameError (uninitialized constant Api::V1::VocabularyWordsController::VocabularyWords):
+  
+app/controllers/api/v1/vocabulary_words_controller.rb:4:in `index'
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-10 14:01:59 -0500
+Processing by Api::V1::VocabularyWordsController#index as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 1513)
+
+
+  
+NameError (uninitialized constant Api::V1::VocabularyWordsController::VocabularyWords):
+  
+app/controllers/api/v1/vocabulary_words_controller.rb:4:in `index'
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-10 14:17:38 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::VocabularyWordsController#index as HTML
+  [1m[36mVocabularyWord Load (6.7ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 9.7ms | ActiveRecord: 9.7ms | Allocations: 13473)
+
+
