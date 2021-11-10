@@ -1,0 +1,2 @@
+class VocabularyWord < ApplicationRecord
+end
