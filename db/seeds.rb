@@ -56,3 +56,5 @@ VocabularyWord.create(word: "vagary", part_of_speech: "noun", definition: "an er
 VocabularyWord.create(word: "vociferous", part_of_speech: "adjective", definition: "marked by or given to vehement insistent outcry")
 VocabularyWord.create(word: "wield", part_of_speech: "transitive verb", definition: "1. chiefly dialectal: to deal successfully with, manage; 2. to handle something, such as a tool, especially effectively; 3a. to exert one's authority by means of; 3b. to have at one's command or disposal")
 VocabularyWord.create(word: "wretch", part_of_speech: "noun", definition: "1. a miserable person: one who is profoundly unhappy or in great misfortune; 2. a base, despicable, or vile person")
+
+Sentence.create(example: "The 2 tried to keep inconspicuous their affinity for one another.", vocabulary_word_id: 1)
