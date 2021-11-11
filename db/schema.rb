@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_10_165744) do
+ActiveRecord::Schema.define(version: 2021_11_11_002828) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "sentences", force: :cascade do |t|
     t.string "example"
-    t.integer "v_word_id"
+    t.integer "vocabulary_word_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
