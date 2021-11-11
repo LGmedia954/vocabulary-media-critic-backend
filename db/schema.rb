@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_11_002828) do
+ActiveRecord::Schema.define(version: 2021_11_11_020423) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "sentences", force: :cascade do |t|
     t.string "example"
-    t.integer "vocabulary_word_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "vocabulary_word_id", null: false
+    t.index ["vocabulary_word_id"], name: "index_sentences_on_vocabulary_word_id"
   end
 
   create_table "vocabulary_words", force: :cascade do |t|
@@ -30,4 +31,5 @@ ActiveRecord::Schema.define(version: 2021_11_11_002828) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "sentences", "vocabulary_words"
 end

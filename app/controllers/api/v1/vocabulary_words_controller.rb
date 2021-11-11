@@ -18,7 +18,7 @@ class Api::V1::VocabularyWordsController < ApplicationController
   private
 
   def vocabulary_word_params
-    params.require(:vocabulary_word).permit(:word, :part_of_speech, :definition) # :v_word_id
+    params.require(:vocabulary_word).permit(:word, :part_of_speech, :definition) # :vocabulary_word_id
   
   end
 
