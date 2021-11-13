@@ -8,6 +8,7 @@ class Api::V1::SentencesController < ApplicationController
 
   def create
     sentence = Sentence.new(sentence_params)
+    byebug
     if sentence.save
       render json: sentence, status: :accepted
     else
