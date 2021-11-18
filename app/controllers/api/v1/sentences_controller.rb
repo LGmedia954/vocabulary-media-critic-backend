@@ -1,9 +1,9 @@
 class Api::V1::SentencesController < ApplicationController
 
   def index
-    @sentences = Sentence.all
-    # render json: @sentences
-    render json: SentenceSerializer.new(@sentences)
+    sentences = Sentence.all
+    # render json: sentences
+    render json: SentenceSerializer.new(sentences)
   end
 
   def create

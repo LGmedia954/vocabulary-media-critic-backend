@@ -1,9 +1,9 @@
 class Api::V1::VocabularyWordsController < ApplicationController
 
   def index
-    @vocabulary = VocabularyWord.all
-    # render json: @vocabulary
-    render json: VocabularyWordSerializer.new(@vocabulary)
+    vocabulary = VocabularyWord.all
+    # render json: vocabulary
+    render json: VocabularyWordSerializer.new(vocabulary)
     # details = {
     #   include: [:sentence]
     # }
