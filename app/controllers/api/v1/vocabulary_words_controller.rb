@@ -14,7 +14,8 @@ class Api::V1::VocabularyWordsController < ApplicationController
   def create
     vocabulary_word = VocabularyWord.new(vocabulary_word_params)
     if vocabulary_word.save
-      render json: vocabulary_word, status: :accepted
+      # render json: vocabulary_word, status: :accepted
+      render json: VocabularyWordSerializer.new(vocabulary_word), status: :accepted
     else
       render json: {errors: vocabulary_word.errors.full_messages}, status: :unprocessible_entity
     end
