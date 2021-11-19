@@ -4,12 +4,9 @@ class Api::V1::VocabularyWordsController < ApplicationController
     vocabulary = VocabularyWord.all
     # render json: vocabulary
     render json: VocabularyWordSerializer.new(vocabulary)
-    # details = {
-    #   include: [:sentence]
-    # }
-    # add a relationship in serializer
-    # render json: VocabularyWordSerializer.new(vocabulary, details)
   end
+
+# I built out this part below, but we're already seeded for 50 words.
 
   def create
     vocabulary_word = VocabularyWord.new(vocabulary_word_params)
@@ -25,7 +22,6 @@ class Api::V1::VocabularyWordsController < ApplicationController
 
   def vocabulary_word_params
     params.require(:vocabulary_word).permit(:word, :part_of_speech, :definition)
-  
   end
 
 end

@@ -4,6 +4,11 @@ class Api::V1::SentencesController < ApplicationController
     sentences = Sentence.all
     # render json: sentences
     render json: SentenceSerializer.new(sentences)
+    # details = {
+    #   include: [:vocabulary_word]
+    # }
+    # add relationship in serializer
+    # render json: SentenceSerializer.new(sentences, details)
   end
 
   def create
@@ -20,8 +25,6 @@ class Api::V1::SentencesController < ApplicationController
 
   def sentence_params
     params.require(:sentence).permit(:example, :vocabulary_word_id)
-  
   end
-
 
 end

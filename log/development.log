@@ -4755,3 +4755,38 @@ Processing by Api::V1::VocabularyWordsController#index as */*
 Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 1.7ms | Allocations: 6063)
 
 
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-18 17:36:14 -0500
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.5ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 21ms (Views: 9.1ms | ActiveRecord: 3.5ms | Allocations: 13654)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-18 17:45:59 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.7ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 5.5ms | Allocations: 8084)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-18 17:46:04 -0500
+Processing by Api::V1::VocabularyWordsController#index as HTML
+  [1m[36mVocabularyWord Load (0.2ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 6060)
+
+
+Started GET "/api/v1/sentences" for ::1 at 2021-11-18 17:46:06 -0500
+Processing by Api::V1::SentencesController#index as HTML
+  [1m[36mSentence Load (0.4ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences"[0m
+  ↳ app/controllers/api/v1/sentences_controller.rb:6:in `index'
+  [1m[36mVocabularyWord Load (0.2ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words" WHERE "vocabulary_words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sentences_controller.rb:6:in `index'
+  [1m[36mVocabularyWord Load (0.1ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words" WHERE "vocabulary_words"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sentences_controller.rb:6:in `index'
+  [1m[36mVocabularyWord Load (0.1ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words" WHERE "vocabulary_words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sentences_controller.rb:6:in `index'
+Completed 200 OK in 16ms (Views: 10.4ms | ActiveRecord: 4.4ms | Allocations: 8464)
+
+
