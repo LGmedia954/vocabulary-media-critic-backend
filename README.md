@@ -1,4 +1,4 @@
-# Vocabulary of the Media Critic
+# Vocabulary of the Media Critic - Back End
 
 The inspiration for this Single Page Application (SPA) came from a weird but fun college professor, now retired. In one of her communications classes, each student was handed a stack of 3x5 flash cards. On each card was a unique new word that we had to research and build a sentence using that word in an instance of mass media critique. Most of my classwork is lost in storage somewhere, but somehow these flash cards survived all household moves and continued to linger around my desk.
 
