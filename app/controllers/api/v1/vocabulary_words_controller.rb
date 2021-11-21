@@ -11,7 +11,7 @@ class Api::V1::VocabularyWordsController < ApplicationController
     render json: vocabulary_word
   end
 
-# For future additions. Database is already seeded for 50 words.
+# For future additions. Database is seeded for 50 words.
 
   def create
     vocabulary_word = VocabularyWord.new(vocabulary_word_params)

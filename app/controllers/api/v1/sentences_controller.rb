@@ -30,7 +30,7 @@ class Api::V1::SentencesController < ApplicationController
     sentence = Sentence.find(params[:id])
     sentence.destroy
 
-    render json: {SentenceId: @sentence.id}
+    #render json: {SentenceId: @sentence.id}
   end
 
   private
