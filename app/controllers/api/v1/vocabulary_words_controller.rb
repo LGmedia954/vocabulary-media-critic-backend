@@ -6,8 +6,12 @@ class Api::V1::VocabularyWordsController < ApplicationController
     render json: VocabularyWordSerializer.new(vocabulary)
   end
 
-# I built out this part below for future use.
-# Database is already seeded for 50 words.
+  def show
+    vocabulary_word = VocabularyWord.find(params[:id])
+    render json: vocabulary_word
+  end
+
+# For future additions. Database is already seeded for 50 words.
 
   def create
     vocabulary_word = VocabularyWord.new(vocabulary_word_params)

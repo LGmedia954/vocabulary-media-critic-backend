@@ -11,6 +11,11 @@ class Api::V1::SentencesController < ApplicationController
     # }
   end
 
+  def show
+    sentence = Sentence.find(params[:id])
+    render json: sentence
+  end
+
   def create
     sentence = Sentence.new(sentence_params)
     if sentence.save
@@ -19,6 +24,13 @@ class Api::V1::SentencesController < ApplicationController
     else
       render json: {errors: sentence.errors.full_messages}, status: :unprocessible_entity
     end
+  end
+
+  def destroy
+    sentence = Sentence.find(params[:id])
+    sentence.destroy
+
+    render json: {SentenceId: @sentence.id}
   end
 
   private

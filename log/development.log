@@ -7567,3 +7567,142 @@ Processing by Api::V1::VocabularyWordsController#index as */*
 Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms | Allocations: 6043)
 
 
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-20 23:23:02 -0500
+  [1m[35m (9.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (51.1ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 98ms (Views: 8.7ms | ActiveRecord: 55.5ms | Allocations: 13654)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-20 23:23:09 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.3ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.3ms | Allocations: 6062)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-20 23:23:16 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.5ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.5ms | Allocations: 6062)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-20 23:27:12 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.3ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.3ms | Allocations: 6062)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-20 23:27:31 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.4ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.4ms | Allocations: 6062)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-20 23:31:05 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.2ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 6043)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-20 23:34:45 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.2ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 6043)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-20 23:36:26 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.3ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.3ms | Allocations: 6043)
+
+
+  [1m[36mSentence Load (64.5ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mVocabularyWord Load (6.2ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words" WHERE "vocabulary_words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVocabularyWord Load (0.3ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words" WHERE "vocabulary_words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSentence Load (1.7ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences" WHERE "sentences"."vocabulary_word_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["vocabulary_word_id", 1], ["LIMIT", 11]]
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-20 23:40:11 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.4ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.4ms | Allocations: 6043)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-20 23:42:58 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.8ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.8ms | Allocations: 6044)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-20 23:45:27 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.2ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 6043)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-20 23:46:10 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.7ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.7ms | Allocations: 6043)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-21 00:03:38 -0500
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.6ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 19ms (Views: 7.8ms | ActiveRecord: 3.0ms | Allocations: 13654)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-21 00:07:04 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (1.3ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 1.3ms | Allocations: 6062)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-21 00:07:59 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.5ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.5ms | Allocations: 6062)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-21 00:08:04 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.3ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.3ms | Allocations: 6062)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-21 00:09:23 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (9.7ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 21ms (Views: 10.9ms | ActiveRecord: 9.7ms | Allocations: 6062)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-21 00:10:46 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (3.2ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 3.2ms | Allocations: 6043)
+
+
+Started GET "/api/v1/vocabulary_words" for ::1 at 2021-11-21 00:10:46 -0500
+Processing by Api::V1::VocabularyWordsController#index as */*
+  [1m[36mVocabularyWord Load (0.4ms)[0m  [1m[34mSELECT "vocabulary_words".* FROM "vocabulary_words"[0m
+  ↳ app/controllers/api/v1/vocabulary_words_controller.rb:6:in `index'
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.4ms | Allocations: 6043)
+
+
