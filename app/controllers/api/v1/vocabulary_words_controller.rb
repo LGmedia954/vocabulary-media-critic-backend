@@ -6,7 +6,8 @@ class Api::V1::VocabularyWordsController < ApplicationController
     render json: VocabularyWordSerializer.new(vocabulary)
   end
 
-# I built out this part below, but we're already seeded for 50 words.
+# I built out this part below for future use.
+# Database is already seeded for 50 words.
 
   def create
     vocabulary_word = VocabularyWord.new(vocabulary_word_params)
