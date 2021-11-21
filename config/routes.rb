@@ -11,6 +11,8 @@ Rails.application.routes.draw do
         resources :sentences
       end
 
+      resources :sentences
+
     end
   end
   

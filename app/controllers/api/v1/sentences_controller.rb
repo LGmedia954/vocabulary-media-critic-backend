@@ -3,12 +3,12 @@ class Api::V1::SentencesController < ApplicationController
   def index
     sentences = Sentence.all
     # render json: sentences
-    render json: SentenceSerializer.new(sentences)
+    # render json: SentenceSerializer.new(sentences)
     
-    # render json: SentenceSerializer.new(sentences, details)
-    # details = {
-    #   include: [:vocabulary_word]
-    # }
+    details = {
+      include: [:vocabulary_word]
+    }
+    render json: SentenceSerializer.new(sentences, details)
   end
 
   def show
