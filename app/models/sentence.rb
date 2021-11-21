@@ -3,8 +3,9 @@ class Sentence < ApplicationRecord
   validates :example, :length => {:maximum => 150, :message => "Limit 150 characters."}
 
   # Need to check this below
-  # def self.valid_input(example, word)
-  #   VocabularyWord.sentence.example.include?(VocabularyWord.word)
+  # def self.valid_input(example)
+  # example = gets.chomp
+  #   VocabularyWord.sentence.example.include?(vocabulary_word)
   # end
 
 end
