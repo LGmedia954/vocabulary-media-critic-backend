@@ -16,7 +16,6 @@ class Api::V1::SentencesController < ApplicationController
     render json: sentence
   end
 
-  # Testing create
   def create
     sentence = Sentence.new(sentence_params)
     if sentence.save
@@ -31,7 +30,7 @@ class Api::V1::SentencesController < ApplicationController
     sentence = Sentence.find(params[:id])
     sentence.destroy
 
-    #render json: {SentenceId: @sentence.id}
+    render json: {message: "success"}, status: :accepted
   end
 
   private
