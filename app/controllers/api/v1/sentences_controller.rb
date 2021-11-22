@@ -16,6 +16,7 @@ class Api::V1::SentencesController < ApplicationController
     render json: sentence
   end
 
+  # Testing create
   def create
     sentence = Sentence.new(sentence_params)
     if sentence.save
