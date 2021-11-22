@@ -20,10 +20,10 @@ WHAT THE PROGRAM DOES
 - When a user loads the webpage, they should see a list of vocabulary words.
 - A user should be able to view the word, its part of speech, and its definition.
 - A user should be able to type a sentence into the input field using that word.
-- A user should be able to view their sentence as it appears on the DOM after the submit button has been activated.
+- A user should be able to view their sentence as it appears on the DOM after the create button has been activated.
 
 AJAX/FETCH REQUESTS
 
 - On initial page load, a Get Request is made for all Vocabulary Words
 - Goal: Upon user mouse actions, Get Requests are made for items to show
-- A Post Request will be made to create and add an example sentence to the DOM.
+- A Post Request will be made to create and add a Sentence Example to the DOM.
