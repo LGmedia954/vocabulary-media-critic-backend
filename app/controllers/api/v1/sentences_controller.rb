@@ -3,12 +3,17 @@ class Api::V1::SentencesController < ApplicationController
   def index
     sentences = Sentence.all
     # render json: sentences
-    render json: SentenceSerializer.new(sentences)
-    # details = {
-    #   include: [:vocabulary_word]
-    # }
-    # add relationship in serializer
-    # render json: SentenceSerializer.new(sentences, details)
+    # render json: SentenceSerializer.new(sentences)
+    
+    details = {
+      include: [:vocabulary_word]
+    }
+    render json: SentenceSerializer.new(sentences, details)
+  end
+
+  def show
+    sentence = Sentence.find(params[:id])
+    render json: sentence
   end
 
   def create
@@ -19,6 +24,13 @@ class Api::V1::SentencesController < ApplicationController
     else
       render json: {errors: sentence.errors.full_messages}, status: :unprocessible_entity
     end
+  end
+
+  def destroy
+    sentence = Sentence.find(params[:id])
+    sentence.destroy
+
+    #render json: {SentenceId: @sentence.id}
   end
 
   private
