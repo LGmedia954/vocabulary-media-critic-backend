@@ -7,7 +7,7 @@ class Api::V1::VocabularyWordsController < ApplicationController
   end
 
   def show
-    vocabulary_word = VocabularyWord.find(vocabulary_word_params[:id])
+    vocabulary_word = VocabularyWord.find(params[:id])
     render json: vocabulary_word
   end
 
@@ -20,7 +20,7 @@ class Api::V1::VocabularyWordsController < ApplicationController
       # render json: vocabulary_word, status: :accepted
       render json: VocabularyWordSerializer.new(vocabulary_word), status: :accepted
     else
-      render json: {errors: vocabulary_word.errors.full_messages}, status: :unprocessible_entity
+      render json: {errors: vocabulary_word.errors.full_messages}
     end
   end
 
