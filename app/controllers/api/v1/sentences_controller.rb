@@ -5,19 +5,20 @@ class Api::V1::SentencesController < ApplicationController
     # render json: sentences
     # render json: SentenceSerializer.new(sentences)
     
-    details = {
-      include: [:vocabulary_word]
-    }
-    render json: SentenceSerializer.new(sentences, details)
+    options = {include: [:vocabulary_word]}
+    render json: SentenceSerializer.new(sentences, options)
   end
 
   def show
-    sentence = Sentence.find(params[:id])
-    render json: sentence
+    sentence = Sentence.find(sentence_params[:id])
+    options = {include: [:vocabulary_word]}
+    render json: SentenceSerializer.new(sentences, options)
   end
 
   def create
+    vocabulary_word = VocabularyWord.find(vocabulary_word_params[:id])
     sentence = Sentence.new(sentence_params)
+    
     if sentence.save
       # render json: sentence, status: :accepted
       render json: SentenceSerializer.new(sentence), status: :accepted
@@ -27,7 +28,8 @@ class Api::V1::SentencesController < ApplicationController
   end
 
   def destroy
-    sentence = Sentence.find(params[:id])
+    vocabulary_word = VocabularyWord.find(vocabulary_word_params[:id])
+    sentence = Sentence.find(sentence_params[:id])
     sentence.destroy
 
     render json: {message: "success"}, status: :accepted

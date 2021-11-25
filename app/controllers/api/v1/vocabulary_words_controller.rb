@@ -7,7 +7,7 @@ class Api::V1::VocabularyWordsController < ApplicationController
   end
 
   def show
-    vocabulary_word = VocabularyWord.find(params[:id])
+    vocabulary_word = VocabularyWord.find(vocabulary_word_params[:id])
     render json: vocabulary_word
   end
 
@@ -15,6 +15,7 @@ class Api::V1::VocabularyWordsController < ApplicationController
 
   def create
     vocabulary_word = VocabularyWord.new(vocabulary_word_params)
+
     if vocabulary_word.save
       # render json: vocabulary_word, status: :accepted
       render json: VocabularyWordSerializer.new(vocabulary_word), status: :accepted
