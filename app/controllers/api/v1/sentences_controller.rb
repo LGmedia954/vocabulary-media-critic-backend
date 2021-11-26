@@ -16,7 +16,7 @@ class Api::V1::SentencesController < ApplicationController
   end
 
   def create
-    vocabulary_word = VocabularyWord.find(params[:id])
+    #vocabulary_word = VocabularyWord.find(params[:id])
     sentence = Sentence.new(sentence_params)
     
     if sentence.save
@@ -28,7 +28,7 @@ class Api::V1::SentencesController < ApplicationController
   end
 
   def destroy
-    vocabulary_word = VocabularyWord.find(params[:id])
+    #vocabulary_word = VocabularyWord.find(params[:id])
     sentence = Sentence.find(params[:id])
     sentence.destroy
 
