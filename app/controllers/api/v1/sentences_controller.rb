@@ -19,14 +19,6 @@ class Api::V1::SentencesController < ApplicationController
 
   def create
     vocabulary_word = VocabularyWord.find_by(id: params[:id])
-    # #byebug
-    # sentence_params[:vocabulary_word].each do |object|
-    #   sentence = Sentence.create(
-    #     example: object[:example],
-    #     vocabulary_word_id: sentence_params[vocabulary_word: [:id]],
-    #     vocabulary_word: sentence_params[vocabulary_word: [:word]]
-    #   )
-    # end
 
     sentence = Sentence.new(sentence_params)
     #byebug
