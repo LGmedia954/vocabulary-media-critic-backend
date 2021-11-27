@@ -28,7 +28,7 @@ class Api::V1::SentencesController < ApplicationController
     #   )
     # end
 
-    sentence = VocabularyWord.sentence.new(sentence_params)
+    sentence = Sentence.new(sentence_params)
     #byebug
     if sentence.save
       # render json: sentence, status: :accepted
