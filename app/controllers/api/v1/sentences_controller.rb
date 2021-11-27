@@ -19,7 +19,7 @@ class Api::V1::SentencesController < ApplicationController
   end
 
   def create
-    # vocabulary_word = VocabularyWord.find_by(id: params[:id])
+    vocabulary_word = VocabularyWord.find_by(id: params[:id])
     # #byebug
     # sentence_params[:vocabulary_word].each do |object|
     #   sentence = Sentence.create(
@@ -29,7 +29,7 @@ class Api::V1::SentencesController < ApplicationController
     #   )
     # end
 
-    sentence = Sentence.new(sentence_params)
+    sentence = VocabularyWord.sentence.new(sentence_params)
     #byebug
     if sentence.save
       # render json: sentence, status: :accepted
