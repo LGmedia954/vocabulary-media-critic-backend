@@ -35,7 +35,7 @@ class Api::V1::SentencesController < ApplicationController
     sentence = Sentence.find(params[:id])
     sentence.destroy
 
-    render json: {message: "success"}, status: :accepted
+    render json: {message: "Sentence deleted"}, status: :accepted
   end
 
   private
