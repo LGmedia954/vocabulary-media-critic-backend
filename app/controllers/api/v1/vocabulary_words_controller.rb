@@ -4,6 +4,7 @@ class Api::V1::VocabularyWordsController < ApplicationController
     vocabulary = VocabularyWord.all
     # render json: vocabulary
     render json: VocabularyWordSerializer.new(vocabulary)
+    # render json: VocabularyWord.all.map { |vw| VocabularyWordSerializer.new(vw) }
   end
 
   def show
