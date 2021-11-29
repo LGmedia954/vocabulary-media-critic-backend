@@ -14,7 +14,7 @@ class Api::V1::SentencesController < ApplicationController
   def show
     sentence = Sentence.find(params[:id])
     options = {include: [:vocabulary_word]}
-    render json: SentenceSerializer.new(sentences, options)
+    render json: SentenceSerializer.new(sentence, options)
   end
 
   def create
