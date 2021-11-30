@@ -2,13 +2,13 @@
 
 Front End Repository: https://github.com/LGmedia954/vocabulary-media-critic-frontend
 
-This Single Page Application (SPA) was created in memory of a weird but fun college professor and mentor. In one of her communications classes, each student was handed a stack of 3x5 flash cards. On each card was a unique new word that we had to research and build a sentence using that word in an instance of mass media critique. Most of my classwork is lost in storage somewhere, but somehow these flash cards survived all household moves and continued to linger around my desk.
+This Single Page Application (SPA) was created in memory of a fun college professor and mentor. In one of her communications classes, each student was handed a stack of 3x5 flash cards. On each card was a unique new word that we had to research and build a sentence using that word in an instance of mass media critique. Most of my classwork is lost in storage somewhere, but somehow these flash cards survived all household moves and continued to linger around my desk.
 
 I wanted my application to serve as a brief sampling of the critical vocabulary used by media critics and influencers. For brevity, this project was created with 50 vocabulary words. The frontend is built with HTML, CSS, and JavaScript, and communicates with a backend API of Ruby and Rails.
 
 # How To Use This Application
 
-To use this app, clone the repository, run bundle install for the necessary gems, then 'rails db:seed' for the seed data for this application. Then open the index.html file and run your rails server. Navigate to http://localhost:3000/. On initial load, a user will see a list of vocabulary words from the seed file. Click on the word that you would like to see defined, and you will be directed to that vocabulary word's show page. It will provide the word and its definition. You are welcome to type and submit your own sentence using that word. The page will then reload (and the DOM will update) to include that new submission.
+To use this app, clone the repository, run bundle install for the necessary gems, then 'rails db:seed' for the seed data for this application. Then open the index.html file and run your rails server. Navigate to http://localhost:3000/. On initial load, a user will see a list of vocabulary words from the seed file. Each word is accompanied by its part of speech (within the scope of media critique), plus its definition. You are welcome to type and submit your own sentence using that word. The DOM will update to include that new submission.
 
 # Project Requirements
 
