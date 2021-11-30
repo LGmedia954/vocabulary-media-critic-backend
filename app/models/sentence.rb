@@ -5,7 +5,7 @@ class Sentence < ApplicationRecord
   # Need to check this below
   # def self.valid_input(example)
   # example = gets.chomp
-  #   VocabularyWord.sentence.example.include?(vocabulary_word)
+  #   VocabularyWord.sentence.example.include?(vocabulary_word.word)
   # end
 
 end
