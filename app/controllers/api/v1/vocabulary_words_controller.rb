@@ -14,16 +14,16 @@ class Api::V1::VocabularyWordsController < ApplicationController
 
 # For future additions. Database is seeded for 50 words.
 
-  def create
-    vocabulary_word = VocabularyWord.new(vocabulary_word_params)
+  # def create
+  #   vocabulary_word = VocabularyWord.new(vocabulary_word_params)
 
-    if vocabulary_word.save
-      # render json: vocabulary_word, status: :accepted
-      render json: VocabularyWordSerializer.new(vocabulary_word), status: :accepted
-    else
-      render json: {errors: vocabulary_word.errors.full_messages}
-    end
-  end
+  #   if vocabulary_word.save
+  #     # render json: vocabulary_word, status: :accepted
+  #     render json: VocabularyWordSerializer.new(vocabulary_word), status: :accepted
+  #   else
+  #     render json: {errors: vocabulary_word.errors.full_messages}
+  #   end
+  # end
 
   private
 
